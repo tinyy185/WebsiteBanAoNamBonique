@@ -35,10 +35,11 @@
 
 <!-- Body -->
 <body>
+<h1 style="font-weight: bold">Bán Quần Áo</h1>
 
 
 	<div class="w3layoutscontaineragileits">
-	<h2>Đăng kí tài khoản</h2>
+	<h2 style="font-weight: bold">Quên mật khẩu</h2>
 
 		<c:if test="${not empty successMessage}">
 			<div class="alert alert-success">
@@ -46,24 +47,24 @@
 			</div>
 		</c:if>
 
-		<form action="/reset_password" method="post" style="max-width: 350px; margin: 0 auto;">
-			<input type="hidden" name="token" value="${token}" />
+		<form action="/quen-mat-khau" method="post" style="max-width: 420px; margin: 0 auto;">
 			<div class="border border-secondary rounded p-3">
 				<div>
+					<p>Vui lòng nhập email .</p>
+				</div>
+				<div>
 					<p>
-						<input type="text" name="ten" id="ten" class="form-control"
-							   placeholder="Enter your new password" required autofocus />
-					</p>
-					<p>
-						<input type="text" class="form-control" placeholder="Confirm your new password"
-							   required oninput="checkPasswordMatch(this);" />
+						<input type="email" name="email" class="form-control" placeholder="Enter your e-mail" required autofocus/><br>
+						<label style="color: red">${error}</label>
 					</p>
 					<p class="text-center">
-						<input type="submit" class="btn btn-primary" />
+						<input type="submit" value="Send" class="btn btn-primary" />
 					</p>
 				</div>
 			</div>
-	</form>
+		</form>
+
+	</div>
 
 
 	<!-- //for register popup -->
@@ -94,15 +95,7 @@
 																		
 		});
 	</script>
-		<script>
-			function checkPasswordMatch(fieldConfirmPassword) {
-				if (fieldConfirmPassword.value !== document.getElementById("ten").value) {
-					fieldConfirmPassword.setCustomValidity("Passwords do not match!");
-				} else {
-					fieldConfirmPassword.setCustomValidity("");
-				}
-			}
-		</script>
+
 </body>
 <!-- //Body -->
 

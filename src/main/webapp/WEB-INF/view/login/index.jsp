@@ -1,87 +1,47 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
-
-<!-- Head -->
 <head>
 
 <title>Existing Login Form a Flat Responsive Widget Template :: W3layouts</title>
 
-<!-- Meta-Tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="keywords" content="Existing Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //Meta-Tags -->
-
 <link href="../../../css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-
-<!-- Style --> <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="all">
-
-<!-- Fonts -->
+<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="all">
 <link href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-<!-- //Fonts -->
-
 </head>
-<!-- //Head -->
-
-<!-- Body -->
 <body>
 
-	<h1>Bán Quần Áo</h1>
+	<h1 style="font-weight: bold">Bán Quần Áo</h1>
 
 	<div class="w3layoutscontaineragileits">
-	<h2>Đăng nhập</h2>
+	<h2 style="font-weight: bold">Đăng nhập</h2>
 
-		<form action="/checkLogin" method="post">
+		<form action="/checkLogin" method="post" >
 
-			<input type="email" Name="email" placeholder="EMAIL" required="">
-			<input type="password" Name="matKhau" placeholder="PASSWORD" required="">
-
+			<input type="email" Name="email" placeholder="EMAIL" required=""><br>
+			<input type="password" Name="matkhau" placeholder="PASSWORD" required=""><br>
+			<label style="color: red">${err}</label>
 
 			<ul class="agileinfotickwthree">
 				<li>
 					<input type="checkbox" id="brand1" value="">
 					<label for="brand1"><span></span>Nhớ tài khoản</label>
-					<a href="/forgot_password">Quên mật khẩu ?</a>
+					<a href="/quen-mat-khau">Quên mật khẩu ?</a>
 				</li>
 			</ul>
 				<input type="submit" value="LOGIN">
 
 			<br>
 			<br>
-				<p> Đăng kí tài khoản ở đây <span>→</span> <a href="/dang-ki"> Bấm vào đây</a></p>
+				<p> Đăng kí tài khoản ở đây <span>→</span> <a href="/dang-ky"> Bấm vào đây</a></p>
 		</form>
-
-<%--		<form id="loginForm" action="/checkLogin" method="post">--%>
-<%--			<input type="email" name="email" id="email" placeholder="EMAIL" required>--%>
-<%--			<input type="password" name="matKhau" id="password" placeholder="PASSWORD" required>--%>
-<%--			<ul class="agileinfotickwthree">--%>
-<%--				<li>--%>
-<%--					<input type="checkbox" id="brand1" value="">--%>
-<%--					<label for="brand1"><span></span>Remember me</label>--%>
-<%--					<a href="/forgot_password">Forgot password?</a>--%>
-<%--				</li>--%>
-<%--			</ul>--%>
-<%--			<input type="submit" value="LOGIN">--%>
-<%--			<br>--%>
-<%--			<p>Đăng kí tài khoản ở đây <span>→</span> <a href="/dang-ki">Click Here</a></p>--%>
-<%--		</form>--%>
-
-
-
-
-
-
-
 	</div>
 	
 	<!-- for register popup -->

@@ -1,45 +1,32 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 
-<!-- Head -->
 <head>
 
 <title>Existing Login Form a Flat Responsive Widget Template :: W3layouts</title>
 
-<!-- Meta-Tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="keywords" content="Existing Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //Meta-Tags -->
+
 
 <link href="../../../css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="all">
 
-<!-- Style --> <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="all">
-
-<!-- Fonts -->
 <link href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-<!-- //Fonts -->
+
 
 </head>
-<!-- //Head -->
 
-<!-- Body -->
 <body>
-<h1>Bán Quần Áo</h1>
-
 
 	<div class="w3layoutscontaineragileits">
-	<h2>Đăng kí tài khoản</h2>
+	<h2>Đổi mật khẩu</h2>
 
 		<c:if test="${not empty successMessage}">
 			<div class="alert alert-success">
@@ -47,49 +34,23 @@
 			</div>
 		</c:if>
 
-		<form:form method="POST" action="/dang-ki/add" modelAttribute="appUser" >
-
-			<div class="form-sub-w3ls">
-				<form:input path="userName" class="form-control" placeholder="Username" />
-				<br>
-				<form:errors path="userName" cssClass="error-message"/>
-
-				<div class="icon-agile">
-					<i class="fa fa-user" aria-hidden="true"></i>
+		<form action="/mat-khau-moi" method="post" style="max-width: 350px; margin: 0 auto;">
+			<input type="hidden" name="token" value="${token}" />
+			<div class="border border-secondary rounded p-3">
+				<div>
+					<p>
+						<input type="text" name="resetPass" class="form-control"
+							   placeholder="Nhập mật khẩu mới" required autofocus />
+					</p>
+					<p>
+						<input type="text" name="xacnhan" class="form-control" placeholder="Xác nhận mật khẩu"/>
+					</p>
+					<p class="text-center">
+						<input type="submit" class="btn btn-primary" />
+					</p>
 				</div>
 			</div>
-			<div class="form-sub-w3ls">
-				<form:input path="email" class="form-control" placeholder="Email" />	<br>
-				<form:errors path="email" cssClass="error-message"/>
-
-				<div class="icon-agile">
-					<i class="fa fa-envelope-o" aria-hidden="true"></i>
-				</div>
-			</div>
-			<div class="form-sub-w3ls">
-				<form:input path="encrytedPassword" class="form-control" placeholder="Pass" />	<br>
-				<form:errors path="encrytedPassword" cssClass="error-message"/>
-
-				<div class="icon-agile">
-					<i class="fa fa-unlock-alt" aria-hidden="true"></i>
-				</div>
-			</div>
-
-			<div class="login-check">
-				<label class="checkbox"><input type="checkbox" name="checkbox" checked="">I Accept Terms & Conditions</label>
-			</div>
-			<div class="submit-w3l">
-				<button type="submit" class="btn btn-primary">Đăng kí tài khoản</button>
-				<br>
-				<p> Quay lại về đăng nhập <span>→</span> <a href="/login">Bấm vào đây ! </a></p>
-
-			</div>
-
-			<br>
-
-		</form:form>
-
-	</div>
+	</form>
 
 
 	<!-- //for register popup -->
@@ -120,7 +81,15 @@
 																		
 		});
 	</script>
-
+		<script>
+			function checkPasswordMatch(fieldConfirmPassword) {
+				if (fieldConfirmPassword.value !== document.getElementById("ten").value) {
+					fieldConfirmPassword.setCustomValidity("Passwords do not match!");
+				} else {
+					fieldConfirmPassword.setCustomValidity("");
+				}
+			}
+		</script>
 </body>
 <!-- //Body -->
 

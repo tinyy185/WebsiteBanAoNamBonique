@@ -41,6 +41,9 @@ public class KhachHang {
     @Column(name = "MatKhau")
     private String matKhau;
 
+    @Column(name = "ResetPassToken")
+    private String resetPass;
+
     @Column(name = "TrangThai")
     private Integer trangThai;
 
