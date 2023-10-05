@@ -23,7 +23,7 @@ public class GioHang {
     @Column(name = "TrangThai")
     private Integer trangThai;
 
-    @ManyToOne
-    @JoinColumn(name = "IdKhachHang", referencedColumnName = "Id")
-    private KhachHang idKhachHang;
+//    @ManyToOne
+//    @JoinColumn(name = "IdKhachHang", referencedColumnName = "Id")
+//    private KhachHang idKhachHang;
 }

@@ -40,8 +40,30 @@
 
 			<br>
 			<br>
-				<p> Đăng kí tài khoản ở đây <span>→</span> <a href="/dang-ky"> Bấm vào đây</a></p>
+				<p> Đăng kí tài khoản ở đây <span>→</span> <a href="/dang-ki"> Bấm vào đây</a></p>
 		</form>
+
+<%--		<form id="loginForm" action="/checkLogin" method="post">--%>
+<%--			<input type="email" name="email" id="email" placeholder="EMAIL" required>--%>
+<%--			<input type="password" name="matKhau" id="password" placeholder="PASSWORD" required>--%>
+<%--			<ul class="agileinfotickwthree">--%>
+<%--				<li>--%>
+<%--					<input type="checkbox" id="brand1" value="">--%>
+<%--					<label for="brand1"><span></span>Remember me</label>--%>
+<%--					<a href="/forgot_password">Forgot password?</a>--%>
+<%--				</li>--%>
+<%--			</ul>--%>
+<%--			<input type="submit" value="LOGIN">--%>
+<%--			<br>--%>
+<%--			<p>Đăng kí tài khoản ở đây <span>→</span> <a href="/dang-ki">Click Here</a></p>--%>
+<%--		</form>--%>
+
+
+
+
+
+
+
 	</div>
 	
 	<!-- for register popup -->

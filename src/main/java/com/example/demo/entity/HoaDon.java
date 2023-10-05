@@ -42,10 +42,10 @@ public class HoaDon {
 
     @Column(name = "TongTien")
     private Float tongTien;
-
-    @ManyToOne
-    @JoinColumn(name = "IdKhachHang", referencedColumnName = "Id")
-    private KhachHang idKhachHang;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "IdKhachHang", referencedColumnName = "Id")
+//    private KhachHang idKhachHang;
 
     @ManyToOne
     @JoinColumn(name = "IdNhanVien", referencedColumnName = "Id")

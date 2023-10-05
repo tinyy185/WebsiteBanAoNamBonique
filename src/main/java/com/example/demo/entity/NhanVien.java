@@ -1,15 +1,29 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.*;
-import lombok.*;
 
-@Entity
-@Table(name = "NhanVien")
-@AllArgsConstructor
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+
+
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-@Builder
+@Table(name = "nhanvien")
+@Entity
+
+
 public class NhanVien {
 
     @Id
@@ -17,35 +31,40 @@ public class NhanVien {
     @Column(name = "Id")
     private Integer id;
 
-    @Column(name = "Ho")
-    private String ho;
+    //
+    @Column(name = "username")
+    private String userName;
 
-    @Column(name = "TenDem")
-    private String tenDem;
+    @Column(name = "Encryted_Password")
+    private String encrytedPassword;
 
-    @Column(name = "Ten")
-    private String ten;
-
-    @Column(name = "GioiTinh")
-    private Boolean gioiTinh;
-
-    @Column(name = "SoDienThoai")
-    private String soDienThoai;
-
-    @Column(name = "DiaChi")
-    private String diaChi;
 
     @Column(name = "Email")
     private String email;
 
-    @Column(name = "MatKhau")
-    private String matKhau;
+    //
+    @Column(name = "cccd")
+    private String cccd;
 
-    @Column(name = "ResetPassToken")
-    private String resetPass;
+    @Column(name = "fullname")
+    private String fullname;
 
-    @Column(name = "TrangThai")
+    @Column(name = "birthdate")
+    private String birthdate;
+
+    @Column(name = "gender")
+    private String gender;
+
+    @Column(name = "addresses")
+    private String addresses;
+
+    @Column(name = "qrcodedate")
+    private String qrcodedate;
+
+    @Column(name = "trangthai")
     private Integer trangThai;
+
+
 
     @ManyToOne
     @JoinColumn(name = "IdChucVu", referencedColumnName = "Id")
