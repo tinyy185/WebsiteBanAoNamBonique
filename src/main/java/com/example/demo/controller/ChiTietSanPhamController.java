@@ -1,5 +1,5 @@
 package com.example.demo.controller;
 
-public class ChiTietSanPham
+public class ChiTietSanPhamController
 {
 }
