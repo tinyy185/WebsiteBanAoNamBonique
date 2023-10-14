@@ -25,7 +25,7 @@ public class KhuyenMai {
     @Column(name = "Ten")
     private String ten;
 
-    @Column(name = "ChieuKhau")
+    @Column(name = "ChietKhau")
     private Integer chietKhau;
 
     @Column(name = "NgayBatDau")
